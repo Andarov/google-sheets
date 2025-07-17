@@ -906,6 +906,10 @@ textarea{
   height: 16rem;
 }
 
+.h-20{
+  height: 5rem;
+}
+
 .w-40{
   width: 10rem;
 }
@@ -1006,6 +1010,12 @@ textarea{
   margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
 }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -1037,6 +1047,11 @@ textarea{
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
+}
+
+.border-\[\#393939\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(57 57 57 / var(--tw-border-opacity, 1));
 }
 
 .bg-\[\#E2FFC8\]{
@@ -1155,6 +1170,11 @@ textarea{
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pb-20{
@@ -1291,6 +1311,10 @@ textarea{
   filter: brightness(1);
 }
 
+.even\:justify-end:nth-child(even){
+  justify-content: flex-end;
+}
+
 .hover\:bg-neutral-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1));
@@ -1340,6 +1364,10 @@ textarea{
     border-radius: 1.5rem;
   }
 
+  .xs\:border-2{
+    border-width: 2px;
+  }
+
   .xs\:\!bg-\[-200px\]{
     background-position: -200px !important;
   }
@@ -1350,6 +1378,16 @@ textarea{
 
   .xs\:p-5{
     padding: 1.25rem;
+  }
+
+  .xs\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .xs\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1426,6 +1464,12 @@ textarea{
     gap: 1.25rem;
   }
 
+  .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:rounded-3xl{
     border-radius: 1.5rem;
   }
@@ -1454,6 +1498,16 @@ textarea{
 
   .sm\:text-xl{
     font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .sm\:text-lg{
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -1555,6 +1609,11 @@ textarea{
   .md\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
