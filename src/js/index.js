@@ -51,10 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gallery.forEach(img => {
     const slide = document.createElement("div");
-    slide.className =
-      "swiper-slide !w-5/6 bg-white !bg-center !bg-cover !bg-no-repeat rounded-xl sm:rounded-2xl lg:!w-[820px]";
-    slide.style.height = "1000px";
-    slide.style.backgroundImage = `url('${img}')`;
+    slide.className = `
+      swiper-slide !w-5/6 lg:!w-[820px]
+      rounded-xl sm:rounded-2xl
+      shadow-xl overflow-hidden flex items-center justify-center
+    `;
+    
+    const image = document.createElement("img");
+    image.src = img;
+    image.alt = "Gallery image";
+    image.className = "w-full h-full object-cover bg-black"; 
+    // object-contain rasmni kesmaydi, qora fon qo'shiladi
+  
+    slide.appendChild(image);
     wrapper.appendChild(slide);
   });
   
@@ -62,18 +71,16 @@ document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".gallery-swiper", {
     loop: true,
     spaceBetween: 20,
-    slidesPerView: 1, // default - kichik ekranlar uchun
+    slidesPerView: 1,
     breakpoints: {
-      768: { slidesPerView: 2 }, // 768px dan katta ekranlarda 2ta
+      820: { slidesPerView: 3 },
+      620: { slidesPerView: 2 },
     },
     navigation: {
       prevEl: ".btn-prev",
       nextEl: ".btn-next",
     },
   });
-  
-  
-    
-  
 });
+
 

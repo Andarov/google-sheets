@@ -63,12 +63,13 @@
 }
 
 /* --- Swiper --- */
-
-/* .gallery-swiper .swiper-slide {
-  filter: brightness(0.3);
-  transition: filter 500ms ease-in-out;
+.gallery-swiper {
+  padding-bottom: 30px;
 }
 
-.gallery-swiper .swiper-slide-active {
-  filter: brightness(1);
-} */
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
