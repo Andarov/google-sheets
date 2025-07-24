@@ -491,6 +491,48 @@
       </div>
     </section>
 
+    <!-- Gallery -->
+    <section id="gallery" class="py-10 md:py-16">
+      <div class="container">
+        <div class="flex items-center justify-between mb-12">
+          <!-- Title -->
+          <h2 class="text-center">Kurs haqida fikrlar</h2>
+
+          <!-- Navigation buttons -->
+          <div class="flex justify-end gap-5">
+            <button
+              class="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11"
+            >
+              <img
+                width="{28}"
+                height="{28}"
+                src="./src/assets/images/icons/arrow-right.svg"
+                alt="Arrow right icon"
+                class="size-5 sm:size-6"
+              />
+            </button>
+
+            <button
+              class="btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11"
+            >
+              <img
+                width="{28}"
+                height="{28}"
+                src="./src/assets/images/icons/arrow-right.svg"
+                alt="Arrow right icon"
+                class="size-5 sm:size-6"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swiper -->
+      <div class="gallery-swiper w-full h-48 xs:h-64 sm:h-80 md:h-[400px]">
+        <div class="swiper-wrapper"></div>
+      </div>
+      
+    </section>
   </main>
 
 
@@ -512,7 +554,7 @@
   <script src="https://unpkg.com/imask"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script defer type="module" src="/src/js/index.js"></script>
+  <script defer type="module" src="./src/js/index.js"></script>
 
 </body>
 

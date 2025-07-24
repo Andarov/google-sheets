@@ -64,11 +64,11 @@
 
 /* --- Swiper --- */
 
-.gallery-swiper .swiper-slide {
+/* .gallery-swiper .swiper-slide {
   filter: brightness(0.3);
   transition: filter 500ms ease-in-out;
 }
 
 .gallery-swiper .swiper-slide-active {
   filter: brightness(1);
-}
+} */
