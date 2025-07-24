@@ -919,6 +919,14 @@ textarea{
   width: 100%;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
+.w-52{
+  width: 13rem;
+}
+
 .max-w-36{
   max-width: 9rem;
 }
