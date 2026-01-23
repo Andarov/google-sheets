@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,25 +12,29 @@
   }
 
   body {
-    @apply overflow-x-hidden bg-[#111] text-base text-white font-normal font-Manrope;
+    @apply overflow-x-hidden bg-dark text-base text-gray-300 font-outfit antialiased selection:bg-primary selection:text-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white;
   }
 
   h2 {
-    @apply text-2xl font-bold sm:text-3xl md:text-4xl;
+    @apply text-3xl font-bold sm:text-4xl md:text-5xl tracking-tight;
   }
 
   input,
   textarea,
   select {
-    @apply w-full bg-white/10 outline-none rounded-lg;
+    @apply w-full bg-surface border border-glass-border outline-none rounded-xl px-4 py-3 text-white focus:border-primary transition-colors duration-300;
   }
 
   option {
-    @apply bg-dark;
+    @apply bg-surface text-white;
   }
 
   textarea {
-    @apply py-2.5 min-h-40 max-h-96 sm:min-h-32;
+    @apply min-h-40 max-h-96 sm:min-h-32;
   }
 }
 
@@ -38,13 +42,17 @@
 
 @layer components {
   .btn-primary {
-    @apply flex items-center justify-center bg-primary px-5 py-2.5 rounded-full text-white;
+    @apply inline-flex items-center justify-center gap-2 bg-primary text-dark font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(52,211,153,0.4)];
   }
 
   .btn-secondary {
-    @apply flex items-center justify-center bg-white/5 px-5 py-2.5 rounded-full border border-[#393939];
+    @apply inline-flex items-center justify-center gap-2 bg-glass border border-glass-border px-8 py-4 rounded-full text-white font-medium backdrop-blur-md transition-all duration-300 hover:bg-white/10 hover:border-white/20;
   }
 
+  .glass-card {
+    @apply bg-surface/50 border border-glass-border backdrop-blur-xl rounded-2xl;
+  }
+  
   .no-scrollbar::-webkit-scrollbar {
     @apply hidden size-0;
   }
@@ -58,18 +66,33 @@
 
 @layer utilities {
   .container {
-    @apply max-w-7xl w-full px-4 mx-auto sm:px-5;
+    @apply max-w-7xl w-full px-4 mx-auto sm:px-6 lg:px-8;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+  }
+  
+  .text-gradient-primary {
+     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400;
   }
 }
 
 /* --- Swiper --- */
 .gallery-swiper {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
-.swiper-slide {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.features-swiper {
+    overflow: visible !important;
+}
+
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+    opacity: 1;
 }
 

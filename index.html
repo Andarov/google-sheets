@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -28,32 +28,51 @@
   <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body>
+<body class="bg-dark text-gray-300 font-outfit relative selection:bg-primary selection:text-white">
+
+  <!-- Background Ambient Glow -->
+  <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+    <div
+      class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] opacity-20 animate-pulse">
+    </div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-600/20 rounded-full blur-[120px] opacity-20">
+    </div>
+  </div>
 
   <!-- Header -->
-  <header id="main" class="py-2 relative bg-white/5">
-    <div class="container">
+  <header id="main"
+    class="fixed top-0 inset-x-0 z-50 border-b border-glass-border bg-dark/80 backdrop-blur-md transition-all duration-300">
+    <div class="container py-4">
       <div class="flex items-center justify-between gap-5">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center">
-          <img width="48" height="48" src="./src/assets/images/icons/sheets.png" alt="Logo image"
-            class="size-8 sm:size-10 md:size-12" />
-          <span class="text-lg font-semibold ml-2">Google sheets</span>
+        <a href="index.html" class="flex items-center gap-3">
+          <div
+            class="size-10 sm:size-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shadow-inner">
+            <img width="48" height="48" src="./src/assets/images/icons/sheets.png" alt="Logo image"
+              class="size-6 sm:size-8" />
+          </div>
+          <span class="text-xl font-bold text-white tracking-tight">Google Sheets</span>
         </a>
 
         <!-- Nav -->
-        <ul class="hidden items-center gap-8 lg:flex">
-          <li><a href="#about">Kurs haqida</a></li>
-          <li><a href="#bolim">Kurs bo'limlari</a></li>
-          <li><a href="#feedbacks">Kurs haqida fikrlar</a></li>
+        <ul class="hidden items-center gap-1 bg-white/5 p-1.5 rounded-full border border-white/10 lg:flex">
+          <li><a href="#about"
+              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              haqida</a></li>
+          <li><a href="#bolim"
+              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              bo'limlari</a></li>
+          <li><a href="#feedbacks"
+              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Mijozlar
+              fikri</a></li>
         </ul>
 
-        <div class="flex items-center gap-5">
-          <a href="https://t.me/Andarov_B" class="hidden btn-primary sm:flex">Kursga yozilish</a>
+        <div class="flex items-center gap-4">
+          <a href="https://t.me/Andarov_B" class="hidden btn-primary py-2.5 px-6 text-sm sm:flex">Kursga yozilish</a>
           <button id="menuButton"
-            class="flex items-center justify-center size-10 bg-neutral-100 rounded-full border transition-colors duration-200 hover:bg-neutral-200 sm:size-11 lg:hidden">
+            class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all lg:hidden">
             <img width="24" height="24" src="./src/assets/images/icons/hamburger.svg" alt="Hamburger menu icon"
-              class="size-[21px] sm:size-6" />
+              class="size-5 invert opacity-80" />
           </button>
         </div>
       </div>
@@ -61,541 +80,473 @@
 
     <!-- Responsive menu -->
     <div id="mobileMenu"
-      class="fixed inset-x-0 top-[60px] z-50 bg-black backdrop-blur-md w-full h-screen translate-x-full transition-transform duration-300 dark:bg-[#212121] sm:top-16 md:top-[72px]">
-      <div class="p-8">
-        <ul class="flex flex-col items-center gap-8">
-          <li><a href="#about">Kurs haqida</a></li>
-          <li><a href="#bolim">Kurs bo'limlari</a></li>
-          <li><a href="#feedbacks">Kurs haqida fikrlar</a></li>
+      class="fixed inset-x-0 top-[72px] z-40 bg-dark/95 backdrop-blur-xl border-b border-glass-border w-full py-10 translate-x-full transition-transform duration-300 lg:hidden">
+      <div class="container">
+        <ul class="flex flex-col items-center gap-6 text-center">
+          <li><a href="#about" class="text-lg font-medium text-white menu-link">Kurs haqida</a></li>
+          <li><a href="#bolim" class="text-lg font-medium text-white menu-link">Kurs bo'limlari</a></li>
+          <li><a href="#feedbacks" class="text-lg font-medium text-white menu-link">Kurs haqida fikrlar</a></li>
+          <li><a href="https://t.me/Andarov_B" class="btn-primary w-full max-w-xs menu-link">Kursga yozilish</a></li>
         </ul>
       </div>
     </div>
   </header>
 
-  <!-- Hero section -->
-  <div>
-    <div class="py-20 md:pb-5 bg-red-5">
-      <div class="container relative">
+  <main class="pt-[80px]">
+    <!-- Hero section -->
+    <section class="relative pt-16 pb-20 overflow-hidden sm:pt-24 lg:pt-32">
+      <!-- Gradient Orb -->
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-primary/20 via-primary/5 to-transparent rounded-full blur-3xl pointer-events-none z-[-1]">
+      </div>
+
+      <div class="container relative z-10 text-center">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.2)] mb-8 animate-fade-in-up">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          <span class="text-sm font-semibold text-white tracking-wide uppercase">100% Amaliy Darslar</span>
+        </div>
+
         <h1
-          class="mb-5 max-w-4xl mx-auto text-center font-extrabold text-2xl px-5 sm:px-0 sm:text-3xl md:text-4xl lg:leading-relaxed lg:text-[44px]">
-          Google sheets va Chatgpt orqali ishingizni <span class="text-primary">10x tezroq</span> bajaring
+          class="max-w-4xl mx-auto font-extrabold text-4xl leading-tight sm:text-5xl md:text-6xl lg:text-[72px] lg:leading-[1.1] mb-6">
+          Google sheets va Chatgpt orqali ishingizni <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-emerald-400 to-green-300">10x
+            tezroq</span> bajaring
         </h1>
-        <p class="relative z-10 mb-8 text-center sm:text-[17px]">
-          Google sheetsni 0dan expert darasida o'rganmoqchimisiz? <br class="md:hidden" />
+
+        <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10 sm:text-xl leading-relaxed">
+          Google sheetsni 0dan expert darasida o'rganmoqchimisiz? <br class="hidden md:block" />
           Unda ushbu kurs aynan siz uchun.
         </p>
-        <div class="flex flex-col items-center justify-center gap-5 w-full sm:flex-row">
-          <a href="https://Andarov_B" class="btn-primary w-40">Kursga yozilish</a>
-          <a href="https://t.me/google_sheets_demo" class="btn-secondary w-52">Bepul demo darslar</a>
+
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row mb-16">
+          <a href="https://t.me/Andarov_B"
+            class="btn-primary w-full sm:w-auto shadow-[0_10px_30px_rgba(52,211,153,0.3)]">Kursga yozilish</a>
+          <a href="https://t.me/google_sheets_demo" class="btn-secondary w-full sm:w-auto">Bepul demo darslar</a>
         </div>
-        <img width="48" height="48" src="./src/assets/images/icons/top-right-arrow.svg" alt="Top right arrow icon"
-          class="absolute -top-14 size-12 sm:left-5 sm:top-auto sm:bottom-5" />
-        <img width="56" height="56" src="./src/assets/images/icons/magic.svg" alt="Magic icon"
-          class="absolute size-12 bottom-20 -left-2 sm:left-5 sm:-bottom-28 md:left-16 md:bottom-28 lg:left-24 lg:size-14 lg:bottom-20" />
-        <img width="40" height="40" src="./src/assets/images/icons/doc.svg" alt="Doc icon"
-          class="absolute left-16 -bottom-14 size-10 sm:left-24 md:-bottom-10" />
-        <img width="48" height="48" src="./src/assets/images/icons/stats.svg" alt="Statistics icon"
-          class="absolute right-0 bottom-12 size-12 sm:right-8" />
-        <img width="48" height="48" src="./src/assets/images/icons/flow.svg" alt="Flow icon"
-          class="absolute right-28 -bottom-20 size-12 md:-bottom-10" />
-      </div>
-    </div>
-    <div class="hidden pt-24 pb-20 sm:block md:pt-12">
-      <div class="container relative">
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-5">
-          <div class="w-full h-72 rounded-2xl overflow-hidden order-1 xs:rounded-3xl xs:h-80 sm:h-96">
-            <img width="226" height="384" src="./src/assets/images/backgrounds/stats.jpg"
-              alt="Statistics background image" class="size-full object-cover bg-white" />
-          </div>
-          <div class="flex items-end w-full h-40 order-3 xs:h-52 sm:h-96 md:order-2">
-            <div
-              class="flex flex-col items-center justify-center gap-1.5 w-full h-full rounded-2xl bg-white/5 xs:rounded-3xl xs:gap-5 md:h-72">
-              <b class="text-2xl text-white font-semibold sm:text-3xl md:text-4xl">50+</b>
-              <p class="max-w-36 text-center text-white text-lg md:text-xl">
-                Mijozlar bilan ishlashda yigilgan tajriba asosida
-              </p>
-            </div>
+
+        <!-- Mobile/Tablet Hero Grid (Alternative to Floating) -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-5 md:hidden mt-10">
+          <div
+            class="bg-surface p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
+            <b class="text-3xl text-primary font-bold">50+</b>
+            <p class="text-sm text-gray-400 mt-2">Mijozlar bilan tajriba</p>
           </div>
           <div
-            class="flex flex-col justify-between w-full order-2 h-72 xs:rounded-3xl xs:h-80 sm:h-96 md:hidden md:order-3 lg:flex">
-            <div class="flex flex-col gap-3.5 items-center justify-center">
-              <div class="flex items-center justify-center gap-3.5">
-                <div class="flex items-center gap-1.5">
-                  <img width="20" height="20" src="./src/assets/images/icons/star.svg" alt="Star icon"
-                    class="size-4 xs:size-5" />
-                  <img width="20" height="20" src="./src/assets/images/icons/star.svg" alt="Star icon"
-                    class="size-4 xs:size-5" />
-                  <img width="20" height="20" src="./src/assets/images/icons/star.svg" alt="Star icon"
-                    class="size-4 xs:size-5" />
-                  <img width="20" height="20" src="./src/assets/images/icons/star.svg" alt="Star icon"
-                    class="size-4 xs:size-5" />
-                  <img width="20" height="20" src="./src/assets/images/icons/star.svg" alt="Star icon"
-                    class="size-4 xs:size-5" />
-                </div>
-                <span class="text-[17px] font-medium">4.9</span>
-              </div>
-              <a href="#comments" class="font-medium underline underline-offset-2">Mijozlar fikri</a>
-            </div>
-            <div class="w-full h-44 bg-white space-y-3.5 p-6 rounded-2xl text-dark xs:p-8 xs:h-52">
-              <span class="inline-block bg-primary/20 p-1.5 rounded-lg">
-                <img width="24" height="24" src="./src/assets/images/icons/layout.svg" alt="Layout icon"
-                  class="size-6" />
-              </span>
-              <b class="block font-medium">Jami darslar</b>
-              <span class="block text-2xl font-semibold sm:text-3xl md:text-4xl">210+</span>
-            </div>
-          </div>
-          <div class="flex items-end w-full h-40 order-5 text-dark xs:rounded-3xl xs:h-52 md:h-96">
-            <div
-              class="flex flex-col items-center justify-center gap-1.5 w-full h-full bg-[#E2FFC8] rounded-2xl xs:gap-5 md:h-72">
-              <b class="text-2xl font-semibold sm:text-3xl md:text-4xl">15+</b>
-              <p class="max-w-36 text-center text-lg md:text-xl">
-                Portfolio tayyorlashingiz uchun real keyslar
-              </p>
-            </div>
+            class="bg-surface p-6 rounded-2xl border border-white/5 flex flex-col items-center justify-center text-center">
+            <b class="text-3xl text-primary font-bold">210+</b>
+            <p class="text-sm text-gray-400 mt-2">Jami darslar soni</p>
           </div>
           <div
-            class="flex flex-col items-start justify-end gap-3 w-full h-40 col-span-2 bg-primary p-6 rounded-2xl order-5 xs:rounded-3xl xs:gap-5 xs:p-8 xs:h-52 md:col-span-1 md:h-96">
-            <img width="48" height="48" src="./src/assets/images/icons/rocket.svg" alt="Rocket icon"
-              class="size-9 sm:size-10 md:size-12" />
-            <p class="w-full text-white text-lg xs:max-w-36 md:text-xl">
-              Bilimingizni biz <br />
-              bilan rivojlantiring
-            </p>
+            class="col-span-2 bg-gradient-to-r from-primary/20 to-surface p-6 rounded-2xl border border-primary/20 flex items-center justify-between">
+            <p class="text-white font-medium text-left">Bilimingizni rivojlantiring</p>
+            <img src="./src/assets/images/icons/rocket.svg" class="w-10 h-10" alt="Rocket">
           </div>
         </div>
+
       </div>
-    </div>
-  </div>
 
-  <main>
-    <!-- Features Section -->
-    <section id="about" class="py-12 md:py-16 bg-zinc-900">
-      <div class="container">
-        <div class="flex items-center justify-between gap-1.5 mb-12">
-          <!-- Title -->
-          <h2>Kurs haqida</h2>
-
-          <!-- Navigation buttons -->
-          <div class="flex justify-end gap-5">
-            <button
-              class="features-swiper-btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11">
-              <img width="28" height="28" src="./src/assets/images/icons/arrow-right.svg" alt="Arrow right icon"
-                class="size-5 sm:size-6" />
-            </button>
-
-            <button
-              class="features-swiper-btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11">
-              <img width="28" height="28" src="./src/assets/images/icons/arrow-right.svg" alt="Arrow right icon"
-                class="size-5 sm:size-6" />
-            </button>
+      <!-- Stats Desktop Row -->
+      <div class="hidden md:block container mt-32">
+        <div class="grid grid-cols-4 gap-6">
+          <div class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
+            <span class="text-4xl font-bold text-primary mb-2">50+</span>
+            <p class="text-gray-400 text-sm">Bizneslar bilan ishlash tajribasi</p>
           </div>
-        </div>
-
-        <div class="features-swiper h-64 mb-5 rounded-2xl xs:h-56 md:h-64 lg:h-72">
-          <div class="swiper-wrapper">
-            <!-- 2 -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/bull.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  Google Sheets’ni formulalar bilan emas, fikrlash bilan o‘rganing
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  Bu yerda siz har bir formulani yodlab emas — mantiqni tushunib o‘rganasiz. Har bir misolda — real
-                  hayotdagi muammo yotadi.
-                </p>
-              </div>
+          <div class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
+            <div class="flex gap-1 mb-2">
+              <img src="./src/assets/images/icons/star.svg" class="w-5 h-5 invert" />
+              <img src="./src/assets/images/icons/star.svg" class="w-5 h-5 invert" />
+              <img src="./src/assets/images/icons/star.svg" class="w-5 h-5 invert" />
+              <img src="./src/assets/images/icons/star.svg" class="w-5 h-5 invert" />
+              <img src="./src/assets/images/icons/star.svg" class="w-5 h-5 invert" />
             </div>
-            <!-- 3 -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/shield.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  Nazariya emas — haqiqiy real vaziyatlar bilan organasiz
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  Kurs davomida siz shunchaki ko‘rib emas, o‘zingiz amalda bajarasiz. Har bir dars — hayotda ishlatilgan
-                  real misol.
-                </p>
-              </div>
-            </div>
-            <!-- 4 -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/object.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  Support mavjud
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  Savolingiz bolsa avvalroq kurs sotib olgan va hozirda turli sohada ishlab turgan mutaxasislardan iborat yopiq communitydan yoki shaxsan ozimdan javob olsangiz boladi
-                </p>
-              </div>
-            </div>
-            <!-- 4 -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/expansion.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  50 dan ortiq tajriba asosida tuzilgan
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  Logistika, ta’lim, qurilish, tibbiyot, market — men 50+ bizneslar uchun tizim tuzganman. Shu tajriba
-                  asosida sizga keraklilarni ajratib berganman.
-                </p>
-              </div>
-            </div>
-            <!-- 5 -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/object.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  Oddiy tilda, analogiyalar bilan tushuntiriladi
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  “Sintaksis”, “argument” degan so‘zlar bilan emas — Google Sheetsni siz biladigan misollar bilan
-                  tushunasiz: magazin, o‘qituvchi, direktor, kassa.
-                </p>
-              </div>
-            </div>
-            <!-- 6  -->
-            <div
-              class="swiper-slide !flex flex-col justify-between gap-4 !h-full bg-[#141260] p-5 rounded-2xl sm:gap-5 max-sm:!w-9/12 sm:rounded-3xl sm:p-6 md:p-8">
-              <img src="./src/assets/images/icons/app.svg" alt="Icon" width="40" height="40"
-                class="size-8 sm:size-9 lg:size-10" />
-              <div class="space-y-3.5">
-                <h3 class="font-semibold text-white sm:text-[17px] lg:text-lg">
-                  Ko‘p gap yo‘q — natijaga qaratilgan qisqa darslar
-                </h3>
-                <p class="text-white text-sm md:text-base">
-                  Ko‘pchilik darsni ko‘rib tugatmaydi, sababi zerikib qoladi. Shuning uchun men har bir darsni 5–10
-                  daqiqalik qilib, faqat eng keraklilarini qoldirdim.
-                </p>
-              </div>
-            </div>
+            <p class="text-gray-400 text-sm">4.9 Mijozlar bahosi</p>
+          </div>
+          <div class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
+            <span class="text-4xl font-bold text-primary mb-2">210+</span>
+            <p class="text-gray-400 text-sm">Jami amaliy darslar</p>
+          </div>
+          <div class="glass-card p-6 flex flex-col items-center text-center hover:bg-white/5 transition-colors">
+            <span class="text-4xl font-bold text-primary mb-2">15+</span>
+            <p class="text-gray-400 text-sm">Real portfolio keyslari</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Information -->
-    <section id="bolim" class="py-12 md:py-16">
-      <div class="container">
-        <!-- Title -->
-        <h2 class="text-center mb-12">
+    <!-- Features Section -->
+    <section id="about" class="py-20 relative bg-surface/30">
+      <!-- Glow accent -->
+      <div class="absolute left-0 top-1/4 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div class="container relative z-10">
+        <div class="flex items-center justify-between mb-12">
+          <h2>Kurs haqida</h2>
+          <div class="flex gap-3">
+            <button
+              class="features-swiper-btn-prev size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
+              <img src="./src/assets/images/icons/arrow-right.svg"
+                class="size-6 rotate-180 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+            </button>
+            <button
+              class="features-swiper-btn-next size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
+              <img src="./src/assets/images/icons/arrow-right.svg"
+                class="size-6 invert opacity-50 group-hover:opacity-100 transition-opacity" />
+            </button>
+          </div>
+        </div>
+
+        <div class="features-swiper overflow-visible">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/bull.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">Formulalar emas, fikrlash</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    Bu yerda siz har bir formulani yodlab emas — mantiqni tushunib o‘rganasiz. Har bir misolda — real
+                    hayotdagi muammo yotadi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/shield.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">Real vaziyatlar</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    Kurs davomida siz shunchaki ko‘rib emas, o‘zingiz amalda bajarasiz. Har bir dars — hayotda
+                    ishlatilgan real misol.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">Doimiy Support</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    Savolingiz bo'lsa yopiq communitydan yoki shaxsan o'zimdan javob olsangiz bo'ladi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/expansion.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">50+ Biznes tajribasi</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    Logistika, ta’lim, qurilish, tibbiyot — 50+ bizneslar uchun tizim tuzganman. Kerakli bilimlarni
+                    ajratib berganman.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">Oddiy til, analogiyalar</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    “Sintaksis” so‘zlarisiz — magazin, o‘qituvchi, direktor misolida oddiy tushuntiriladi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide h-auto">
+              <div
+                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
+                <div
+                  class="size-14 rounded-2xl bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <img src="./src/assets/images/icons/app.svg" class="size-7 invert brightness-0" />
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-3">Qisqa va lo'nda</h3>
+                  <p class="text-gray-400 leading-relaxed">
+                    Har bir dars 5–10 daqiqa. Zerikmaysiz, faqat eng kerakli narsalar.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information / Course Modules -->
+    <section id="bolim" class="py-20 bg-dark/50 overflow-hidden">
+      <div class="container relative">
+        <!-- Central Line (Desktop) -->
+        <div
+          class="absolute left-1/2 top-32 bottom-20 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent hidden lg:block">
+        </div>
+
+        <h2 class="text-center mb-16 max-w-3xl mx-auto">
           Kurs bo'limlari va o'rganish ketma-ketligi (step by step)
         </h2>
 
-        <ol class="space-y-6 sm:space-y-8">
-          <!-- 1 -->
-          <li class="flex items-center even:justify-end">
-            <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >01.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-                Google sheets 0dan dastur yaratishgacha (120ta dars)
-              </h3>
-            </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Asos:</span> ochish, stillar bilan ishlash, offline ishlatish, autofill</li>
-                <li><span class="text-primary">60+ formulalar:</span> SPLIT, CONCATENATE, LEFT, MID, RIGHT, PROPER, TEXT, SUM, COUNT, MIN, MAX, AVERAGE, DAY, MONTH, YEAR, DAYS, IF, IFs, COUNTIF, SUMIF, SUMIFS, FILTER, QUERY, ARRAYFORMULA, SEQUENCE, GOOGLETRANSLATE, DETECTLANGUAGE, IFERROR, PMT, GOOGLEFINANCE, IMPORTRANGE, XLOOKUP va boshqa</li>
-                <li><span class="text-primary">Ma'lumotlarni tahlil qilish:</span> Sort, filter va conditional formatting, Pivot table, Charts</li>
-                <li><span class="text-primary">Havfsizlik va hamkorlik:</span> Fayllarni baham ko‘rish, comment, nusxalashni cheklash, versiyalar bilan ishlash</li>
-              </ul>
-            </div>
-            </div>
-          </li>
+        <div class="flex flex-col gap-8 relative z-10">
 
-          <!-- 2 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 1 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 lg:text-right order-2 lg:order-1">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">01. Google sheets 0dan dastur yaratishgacha</h3>
+                <p class="text-sm text-gray-400 mb-4">(120ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">Asos:</span> ochish, stillar, offline, autofill</li>
+                  <li><span class="text-white font-medium">60+ formulalar:</span> SUM, IF, FILTER, QUERY, VLOOKUP...
+                  </li>
+                  <li><span class="text-white font-medium">Tahlil:</span> Pivot table, Charts, Sort/Filter</li>
+                  <li><span class="text-white font-medium">Havfsizlik:</span> Fayllarni himoyalash, hamkorlik</li>
+                </ul>
+              </div>
+            </div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >02.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-                Extra kuchaytirilgan darslar(120ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-primary flex items-center justify-center z-20 shadow-[0_0_20px_rgba(52,211,153,0.5)] order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-dark">01</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Formulalarni qachon, nima uchun va qanday tanlashni o‘rganasiz</span></li>
-                <li><span class="text-primary">20+ formulalar:</span> REGEX, SORTN, JOIN VS TEXTJOIN, TREND, LET, BYROW, BYCOL, ISLI FORMULALAR va boshqa</li>
-                <li><span class="text-primary">Turli real keyslar</span></li>
-              </ul>
-            </div>
-            </div>
-          </li>
+            <div class="flex-1 order-3 lg:order-3 lg:invisible"></div>
+          </div>
 
-          <!-- 3 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 2 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 order-3 lg:order-1 lg:invisible"></div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >03.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-              ChatGPT yordamida Google Sheets’dan samarali foydalanish (6ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">02</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Ro‘yxatdan o‘tish va o‘zbek tilida muloqot qilish</span></li>
-                <li><span class="text-primary">Kerakli ma’lumotlar asosida jadval tuzdirish</li>
-                <li><span class="text-primary">To‘g‘ri prompt yozish</span></li>
-                <li><span class="text-primary">Tayyor kodni moslashtirish</span></li>
-                <li><span class="text-primary">Formuladagi xatoliklarni tuzattirish</span></li>
-                <li><span class="text-primary">Real keys orqali muammoni hal qilish</span></li>
-              </ul>
+            <div class="flex-1 order-2 lg:order-3">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">02. Extra kuchaytirilgan darslar</h3>
+                <p class="text-sm text-gray-400 mb-4">(120ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">Formulalar logikasi:</span> Qachon va qanday tanlash</li>
+                  <li><span class="text-white font-medium">20+ Pro formulalar:</span> REGEX, QUERY, LAMBDA, MAP...</li>
+                  <li><span class="text-white font-medium">Real Keyslar:</span> Murakkab yechimlar</li>
+                </ul>
+              </div>
             </div>
-            </div>
-          </li>
+          </div>
 
-          <!-- 4 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 3 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 lg:text-right order-2 lg:order-1">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">03. ChatGPT va Google Sheets</h3>
+                <p class="text-sm text-gray-400 mb-4">(6ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">AI yordamchi:</span> Prompt yozish, kod yozdirish</li>
+                  <li><span class="text-white font-medium">Tuzatish:</span> Xatolarni aniqlash va yechish</li>
+                  <li><span class="text-white font-medium">Avtomatlashtirish:</span> AI orqali jadval tuzish</li>
+                </ul>
+              </div>
+            </div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >04.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-              O‘quv markazi uchun avtomatlashtirilgan tizim (16ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">03</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Kirish va qabul tizimi</span> – Ro‘yxatga olish, ma'lumotlar bazasi yaratish.</li>
-                <li><span class="text-primary">O‘quvchilar sahifasi</span> – Darslar jadvali, guruhga qarab narxni aniqlash, to‘lov hisoblash, chegirmalar, qoldiq summalarni chiqarish</li>
-                <li><span class="text-primary">To‘lov tizimi</span> – Bo‘lib to‘lash, kunlik filtr, statistika, qarzdorlar ro‘yxati.</li>
-                <li><span class="text-primary">Asosiy sahifa</span> – Real-time hisobot, avtomatik hisob-kitob, hodimlar va markaz ulushi.</li>
-                <li><span class="text-primary">Xarajat va oyliklar</span> – Xarajatlar tahlili, oylik tizimi, jarimalar bilan bog‘liqlik.</li>
-                <li><span class="text-primary">Statistika va yakuniy sahifalar</span> – Vizual diagrammalar, chek sahifasi va yangi oylarga tizimni moslash.</li>
-              </ul>
-            </div>
-            </div>
-          </li>
+            <div class="flex-1 order-3 lg:order-3 lg:invisible"></div>
+          </div>
 
-          <!-- 5 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 4 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 order-3 lg:order-1 lg:invisible"></div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >05.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-              Amaliyot va Portfolio (16ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">04</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Ombor va mahsulotlar nazorati tizimlari:</span> Omborda mahsulot qoldig‘ini hisoblash (soddalashtirilgan usul), Kanselyariya (konstavar) hisob tizimi, Qurilish kompaniyasi uchun hisob-kitob tizimi</li>
-                <li><span class="text-primary">Moliyaviy nazorat va tahlil:</span> – Kirim-chiqim jadvali, Firma kirim-chiqim nazorati, Xitoydan tovar oldi-sotdi hisoboti, Nasiya savdo tizimi, Avia bilet sotuv tizimi, Entertainment uchun boshqaruv tizimi (event/studio)</li>
-                <li><span class="text-primary">Hodimlar va xizmat buyurtmalari:</span> Hodimlar hujjatlari holati nazorati, Ishchilarni avtomatik navbatchilikka ajratish (Den/Noch), Buyurtma asosidagi ish boshqaruvi</li>
-                <li><span class="text-primary">Boshqaruv va tahlil tizimlari:</span> Klaster boshqaruvi, Project Management tizimi, DTM reyting jadvali, Undiruv tizimi (shablon bilan)</li>
-              </ul>
+            <div class="flex-1 order-2 lg:order-3">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">04. O‘quv markazi tizimi (CRM)</h3>
+                <p class="text-sm text-gray-400 mb-4">(16ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">CRM Asoslari:</span> Qabul, baza, guruhlar</li>
+                  <li><span class="text-white font-medium">Moliya:</span> To'lovlar, qarzdorlik, oylik hisoblash</li>
+                  <li><span class="text-white font-medium">Dashboard:</span> Real-time statistika</li>
+                </ul>
+              </div>
             </div>
-            </div>
-          </li>
+          </div>
 
-          <!-- 6 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 5 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 lg:text-right order-2 lg:order-1">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">05. Amaliyot va Portfolio</h3>
+                <p class="text-sm text-gray-400 mb-4">(16ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">Ombor:</span> Mahsulot qoldig'i, kirim-chiqim</li>
+                  <li><span class="text-white font-medium">Moliya:</span> Kassa, Nasiya savdo, Xarajatlar</li>
+                  <li><span class="text-white font-medium">HR:</span> Ishchilar nazorati, Tabel, KPI</li>
+                </ul>
+              </div>
+            </div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >06.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-              Boshlang‘ich App Script (12ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">05</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">App Script asoslari:</span> App Script nima, qanday ishga tushiriladi, funksiya va triggerlar bilan tanishish.</li>
-                <li><span class="text-primary">Matn va raqamlar bilan ishlash:</span> Latin ↔ Krill o‘girish tugmasi, raqamni o‘zbek so‘zlariga aylantirish, random user generator.</li>
-                <li><span class="text-primary">Avtomatlashtirish:</span> Funksiya orqali bir nechta sheet ochish, auto ID yaratish, dependent dropdown yaratish.</li>
-                <li><span class="text-primary">Telegram bilan integratsiya:</span> Sheets’dan ma’lumotni Telegram kanal/botga yuborish, faqat kerakli qismini ajratib yuborish.</li>
-                <li><span class="text-primary">API bilan ishlash:</span> API nima, qanday ulanadi, rasm URL’ini ko‘rsatish, ma’lumotni olib sort qilish..</li>
-                <li><span class="text-primary">Form va xavfsizlik funksiyalari:</span> Web-saytdan Sheetsga ma’lumot yuborish, faqat bugungi kunda edit qilishga ruxsat berish, eski qiymatga avtomatik qaytarish.</li>
-              </ul>
-            </div>
-            </div>
-          </li>
+            <div class="flex-1 order-3 lg:order-3 lg:invisible"></div>
+          </div>
 
-          <!-- 7 -->
-          <li class="flex items-center even:justify-end">
+          <!-- Item 6 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 order-3 lg:order-1 lg:invisible"></div>
             <div
-              class="bg-white/5 max-w-3xl w-full p-4 rounded-2xl border border-[#393939] xs:border-2 xs:rounded-3xl xs:px-8 sm:gap-5"
-            >
-            <div class="flex items-center gap-4 mb-2">
-              <span class="text-xl font-semibold text-primary sm:text-2xl md:text-3xl"
-                >07.</span
-              >
-              <h3
-                class="text-sm font-medium xs:text-base sm:text-lg md:text-xl"
-              >
-              Google Forms bilan professional ishlash (4ta dars)
-              </h3>
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">06</span>
             </div>
-            <div class="text-white/60">
-              <ul class="list-disc">
-                <li><span class="text-primary">Google Forms asoslari:</span> Kirish, barcha savol turlari (short answer, multiple choice, dropdown va boshqalar), responses bilan ishlash, Google Sheetsga bog‘lash va filter qilish.</li>
-                <li><span class="text-primary">Test yaratish:</span> To‘g‘ri/xato javoblar belgilash, har bir savolga ball qo‘yish, avtomatik baholash.</li>
-                <li><span class="text-primary">Validation va shartlar:</span> Kiritiladigan javobga cheklovlar qo‘yish, ko‘p bo‘limli formalar, faqat ma’lum odamlar kira oladigan sectionlar.</li>
-                <li><span class="text-primary">Dizayn va stil:</span>Har xil mavzular (themes), headerga rasm qo‘yish, formasining vizual ko‘rinishini o‘zgartirish.</li>
-              </ul>
+            <div class="flex-1 order-2 lg:order-3">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">06. App Script (Avtomatlashtirish)</h3>
+                <p class="text-sm text-gray-400 mb-4">(12ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">Scriptlar:</span> Lotin-Kirill, Raqamni so'zga o'girish</li>
+                  <li><span class="text-white font-medium">Integratsiya:</span> Telegram botga xabar yuborish</li>
+                  <li><span class="text-white font-medium">Web App:</span> Saytga ulash, API</li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="flex flex-col lg:flex-row items-center gap-8 group">
+            <div class="flex-1 lg:text-right order-2 lg:order-1">
+              <div
+                class="glass-card p-6 lg:p-8 hover:border-primary/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 class="text-xl font-bold mb-3 text-primary">07. Google Forms Pro</h3>
+                <p class="text-sm text-gray-400 mb-4">(4ta dars)</p>
+                <ul class="text-left text-gray-400 text-sm space-y-2 list-disc pl-4">
+                  <li><span class="text-white font-medium">Formalar:</span> So'rovnoma, Testlar tuzish</li>
+                  <li><span class="text-white font-medium">Logika:</span> Sectionlar, shartli o'tishlar</li>
+                  <li><span class="text-white font-medium">Avtomat:</span> Baholash va sertifikat berish</li>
+                </ul>
+              </div>
             </div>
-          </li>
-        </ol>
+            <div
+              class="size-12 rounded-full border-4 border-dark bg-surface border-white/20 flex items-center justify-center z-20 order-1 lg:order-2 shrink-0">
+              <span class="font-bold text-gray-500 group-hover:text-white transition-colors">07</span>
+            </div>
+            <div class="flex-1 order-3 lg:order-3 lg:invisible"></div>
+          </div>
+
+
+        </div>
       </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="feedbacks" class="py-10 md:py-16">
-      <div class="container">
+    <!-- Feedback / Gallery -->
+    <section id="feedbacks" class="py-20 bg-surface/30">
+      <div class="container overflow-hidden">
         <div class="flex items-center justify-between mb-12">
-          <!-- Title -->
-          <h2 class="text-center">Kurs haqida fikrlar</h2>
+          <h2>Kurs haqida fikrlar</h2>
 
-          <!-- Navigation buttons -->
-          <div class="flex justify-end gap-5">
+          <div class="flex gap-3">
             <button
-              class="btn-prev flex items-center justify-center size-10 rotate-180 border-2 border-white rounded-full opacity-70 sm:size-11"
-            >
-              <img
-                width="{28}"
-                height="{28}"
-                src="./src/assets/images/icons/arrow-right.svg"
-                alt="Arrow right icon"
-                class="size-5 sm:size-6"
-              />
+              class="btn-prev size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
+              <img src="./src/assets/images/icons/arrow-right.svg"
+                class="size-6 rotate-180 invert opacity-50 group-hover:opacity-100 transition-opacity" />
             </button>
-
             <button
-              class="btn-next flex items-center justify-center size-10 border-2 border-white rounded-full opacity-70 sm:size-11"
-            >
-              <img
-                width="{28}"
-                height="{28}"
-                src="./src/assets/images/icons/arrow-right.svg"
-                alt="Arrow right icon"
-                class="size-5 sm:size-6"
-              />
+              class="btn-next size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
+              <img src="./src/assets/images/icons/arrow-right.svg"
+                class="size-6 invert opacity-50 group-hover:opacity-100 transition-opacity" />
             </button>
           </div>
         </div>
-      </div>
 
-      <!-- Swiper -->
-      <div class="gallery-swiper w-full h-48 xs:h-64 sm:h-80 md:h-[400px]">
-        <div class="swiper-wrapper"></div>
+        <!-- Swiper -->
+        <div class="gallery-swiper w-full">
+          <div class="swiper-wrapper">
+            <!-- JS will populate this with images as before -->
+          </div>
+        </div>
       </div>
-      
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="py-8 bg-white/5 border-t border-[#393939] xs:border-t-2">
-    <div class="container space-y-8 sm:space-y-5">
-      <div class="flex items-center justify-between gap-5">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center">
-          <img width="48" height="48" src="./src/assets/images/icons/sheets.png" alt="Logo image"
-            class="size-8 sm:size-10 md:size-12" />
-          <span class="text-lg font-semibold ml-2">Google sheets</span>
-        </a>
+  <footer class="py-12 bg-dark border-t border-glass-border">
+    <div class="container">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
 
-        <!-- Nav -->
-        <ul class="hidden items-center gap-8 lg:flex">
-          <li><a href="#about">Kurs haqida</a></li>
-          <li><a href="#bolim">Kurs bo'limlari</a></li>
-          <li><a href="#feedbacks">Kurs haqida fikrlar</a></li>
-        </ul>
+        <!-- Brand -->
+        <div class="text-center md:text-left">
+          <a href="index.html" class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <img src="./src/assets/images/icons/sheets.png" alt="Logo" class="size-8" />
+            <span class="text-xl font-bold text-white">Google Sheets</span>
+          </a>
+          <p class="text-gray-500 text-sm max-w-xs mx-auto md:mx-0">
+            O'zbek tilidagi eng mukammal Google Sheets kursi.
+          </p>
+        </div>
 
         <!-- Social -->
-        <ul class="flex items-center gap-3.5">
-          <li>
-            <a
-              target="_blank"
-              title="Instagram"
-              aria-label="Instagram"
-              href="#"
-            >
-              <img
-                width="32"
-                height="32"
-                src="./src/assets/images/icons/instagram.svg"
-                alt="Instagram logo icon"
-                class="size-8"
-              />
-            </a>
-          </li>
+        <div class="flex gap-4">
+          <a href="#"
+            class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+            <img src="./src/assets/images/icons/instagram.svg" class="size-5 invert" />
+          </a>
+          <a href="https://t.me/google_sheets_demo"
+            class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+            <img src="./src/assets/images/icons/telegram.svg" class="size-5 invert" />
+          </a>
+        </div>
 
-          <li>
-            <a
-              target="_blank"
-              title="Telegram"
-              aria-label="Telegram"
-              href="https://t.me/google_sheets_demo"
-            >
-              <img
-                width="32"
-                height="32"
-                src="./src/assets/images/icons/telegram.svg"
-                alt="Telegram logo icon"
-                class="size-8"
-              />
-            </a>
-          </li>
-        </ul>
       </div>
 
-      <!-- Mobile Nav -->
-      <ul class="flex flex-col items-center gap-8 sm:flex-row lg:hidden">
-        <li><a href="#about">Kurs haqida</a></li>
-          <li><a href="#bolim">Kurs bo'limlari</a></li>
-          <li><a href="#feedbacks">Kurs haqida fikrlar</a></li>
-      </ul>
+      <!-- Copyright -->
+      <div class="mt-8 pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+        &copy; 2026 Google Sheets Uz. Barcha huquqlar himoyalangan.
+      </div>
     </div>
   </footer>
-
 
   <script type="application/ld+json">
     {
