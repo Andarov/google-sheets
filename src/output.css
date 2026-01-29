@@ -1144,6 +1144,10 @@ textarea{
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -1255,6 +1259,11 @@ textarea{
   border-color: rgb(255 255 255 / 0.05);
 }
 
+.bg-\[\#050505\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
+}
+
 .bg-dark{
   --tw-bg-opacity: 1;
   background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
@@ -1300,11 +1309,6 @@ textarea{
 
 .bg-white\/5{
   background-color: rgb(255 255 255 / 0.05);
-}
-
-.bg-\[\#050505\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
 }
 
 .bg-dark\/95{
