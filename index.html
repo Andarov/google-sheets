@@ -185,132 +185,104 @@
       <div class="absolute left-0 top-1/4 w-96 h-96 bg-primary/10 blur-[100px] rounded-full pointer-events-none"></div>
 
       <div class="container relative z-10">
-        <div class="flex items-center justify-between mb-12">
-          <h2>Kurs haqida</h2>
-          <div class="flex gap-3">
-            <button
-              class="features-swiper-btn-prev size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
-              <img src="./src/assets/images/icons/arrow-right.svg"
-                class="size-6 rotate-180 invert opacity-50 group-hover:opacity-100 transition-opacity" />
-            </button>
-            <button
-              class="features-swiper-btn-next size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
-              <img src="./src/assets/images/icons/arrow-right.svg"
-                class="size-6 invert opacity-50 group-hover:opacity-100 transition-opacity" />
-            </button>
-          </div>
-        </div>
-
-        <div class="features-swiper overflow-visible">
-          <div class="swiper-wrapper">
+        <div>
+          <h2 class="mb-12">Kurs haqida</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Slide 1 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/bull.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">Formulalar emas, fikrlash</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    Bu yerda siz har bir formulani yodlab emas — mantiqni tushunib o‘rganasiz. Har bir misolda — real
-                    hayotdagi muammo yotadi.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-primary to-emerald-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/bull.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Formulalar emas, fikrlash</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  Bu yerda siz har bir formulani yodlab emas — mantiqni tushunib o‘rganasiz. Har bir misolda — real
+                  hayotdagi muammo yotadi.
+                </p>
               </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/shield.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">Real vaziyatlar</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    Kurs davomida siz shunchaki ko‘rib emas, o‘zingiz amalda bajarasiz. Har bir dars — hayotda
-                    ishlatilgan real misol.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/shield.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Real vaziyatlar</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  Kurs davomida siz shunchaki ko‘rib emas, o‘zingiz amalda bajarasiz. Har bir dars — hayotda
+                  ishlatilgan real misol.
+                </p>
               </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">Doimiy Support</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    Savolingiz bo'lsa yopiq communitydan yoki shaxsan o'zimdan javob olsangiz bo'ladi.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Doimiy Support</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  Savolingiz bo'lsa yopiq communitydan yoki shaxsan o'zimdan javob olsangiz bo'ladi.
+                </p>
               </div>
             </div>
 
             <!-- Slide 4 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/expansion.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">50+ Biznes tajribasi</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    Logistika, ta’lim, qurilish, tibbiyot — 50+ bizneslar uchun tizim tuzganman. Kerakli bilimlarni
-                    ajratib berganman.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/expansion.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">50+ Biznes tajribasi</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  Logistika, ta’lim, qurilish, tibbiyot — 50+ bizneslar uchun tizim tuzganman. Kerakli bilimlarni
+                  ajratib berganman.
+                </p>
               </div>
             </div>
 
             <!-- Slide 5 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">Oddiy til, analogiyalar</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    “Sintaksis” so‘zlarisiz — magazin, o‘qituvchi, direktor misolida oddiy tushuntiriladi.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/object.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Oddiy til, analogiyalar</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  “Sintaksis” so‘zlarisiz — magazin, o‘qituvchi, direktor misolida oddiy tushuntiriladi.
+                </p>
               </div>
             </div>
 
             <!-- Slide 6 -->
-            <div class="swiper-slide h-auto">
+            <div
+              class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
               <div
-                class="glass-card p-8 h-full flex flex-col gap-6 hover:border-primary/50 transition-colors duration-300 group">
-                <div
-                  class="size-14 rounded-2xl bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                  <img src="./src/assets/images/icons/app.svg" class="size-7 invert brightness-0" />
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-3">Qisqa va lo'nda</h3>
-                  <p class="text-gray-400 leading-relaxed">
-                    Har bir dars 5–10 daqiqa. Zerikmaysiz, faqat eng kerakli narsalar.
-                  </p>
-                </div>
+                class="size-14 rounded-2xl bg-gradient-to-br from-gray-500 to-gray-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <img src="./src/assets/images/icons/app.svg" class="size-7 invert brightness-0" />
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-3">Qisqa va lo'nda</h3>
+                <p class="text-gray-400 leading-relaxed">
+                  Har bir dars 5–10 daqiqa. Zerikmaysiz, faqat eng kerakli narsalar.
+                </p>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Information / Course Modules -->
@@ -487,25 +459,151 @@
         <div class="flex items-center justify-between mb-12">
           <h2>Kurs haqida fikrlar</h2>
 
-          <div class="flex gap-3">
-            <button
-              class="btn-prev size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
-              <img src="./src/assets/images/icons/arrow-right.svg"
-                class="size-6 rotate-180 invert opacity-50 group-hover:opacity-100 transition-opacity" />
-            </button>
-            <button
-              class="btn-next size-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all group">
-              <img src="./src/assets/images/icons/arrow-right.svg"
-                class="size-6 invert opacity-50 group-hover:opacity-100 transition-opacity" />
-            </button>
-          </div>
+          <a href="https://t.me/google_sheets_course"
+            class="text-primary hover:text-white transition-colors font-medium cursor-pointer">
+            Boshqa fikrlar ->
+          </a>
         </div>
 
-        <!-- Swiper -->
-        <div class="gallery-swiper w-full">
-          <div class="swiper-wrapper">
-            <!-- JS will populate this with images as before -->
+        <!-- Static Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Review 1 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">G'</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">G'anisher Raximov</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Kurs man kutgan kursim ekan, sizni kursizni olishdan oldin boshqa kurslarda o'qib chiqdim, ulardan yangi
+              narsa o'rganmadim, excel google sheets boyicha tajribam bor kop ishlatiladigan formulalarni bilardim sotib
+              olgan pro kurslarim ham shu narsalarni orgatdi 2-3 ta narsa organganman. Sizni kursizda nimasi yoqdi
+              desangiz real keyslar bilan tushintirgansiz, struktura tuzish bor, formulalarni dinamik qilishni kordim,
+              man kormagan formulalar bor, va yana bitta zor tarafi ozingiz tomonizdan yordam shu ham menga juda yoqdi
+              lekin kursni hali toliq korib chiqmadim lekin kop malumotlar oldim savollarim kamaydi, ha yana zor tarafi
+              kurs umrbod va yangi video darslar qoshib borishiz va ozingizdagi muammolarni ulashib borishingiz shu
+              taraflari ham juda yoqdi. Kim mandan google sheets boyicha kurs sorasa sizni tavsiya qilyabman va barchasi
+              hozir sizni kursizda oqiyabdilar. Katta rahmat ustoz
+            </p>
           </div>
+
+          <!-- Review 2 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">A</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Akrom</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Darslaringiz juda ajoyib, bunday darsliklarni o`zbek tilidagisini topish muammo, youtubeda ham kamida rus
+              tilidagisi bor bo`lmasam qolgan hammasi ingliz tilida, til bilmagan odamlarni o`rganishi juda qiyin
+              bo`ladi. Bitta formulani o`rganish uchun avval darsliklarni kamida 3-4 tasini ko`rib shular haqida
+              ma`lumotlar yig`adi keyin esa tushunib olishi mumkin. SIzda esa buni kerak bo`lsa jaydaricha tilda ham
+              yaxshigina tushuntirgansiz. SHogirtlaringiz ham yoshlari anchagina , Ko`pchilik kanal ochib google sheets
+              bo`yicha darsliklarni berishni yoki bo`lmasam o`z xizmatlarini taklif qilishini boshlashdi yaxshilab
+              so`rasam ularni aksariyati sizni shogirtlaringiz.Nafaqat darsliklar balki qolgan hammasi zo`r.
+            </p>
+          </div>
+
+          <!-- Review 3 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">R</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Abdullayev. R</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Ko'p excel kurslariga borib ko'rdim, shu ustozga raxmat diman, @Andarov_B, qivotkan ishni oldin tasavur
+              qilib, keyin qillshni, o'rgatdi excelda Google sheetsda koplab formulala bor, uladan qaysi momentda qanday
+              foydalanishni, real ko'zizi oldiga keltirib o'qishni shu ustozdan o'rgandim
+
+              O'zim Respublika Tez tibbiy yordam markazi Toshkent shahar filialida Avtojamlanma boshlig'iman, butun
+              boshli 103 ni oylik tizimi, benzin, xodimlani boshqarish tizimi shu ustoz orqali takomillashdi yanayam
+              yetuk o'ringa erishdi disamam, bo'ladi kerakli javobni shu insondan oldim.
+
+              Real keys, tizimim yakunlansa qisqacha tashab o'taman, 103 da butun boshli shahar qanday tizim qilinganini
+            </p>
+          </div>
+
+          <!-- Review 4 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">A</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Abror</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+
+              Google sheets kursida o'qiganingizdan so'ng ayrim odamlar bitta formula yoki amal bilan qilish mumkin
+              boʻlgan ishni yillar davomida qoʻlda bittalab 3-4 soat(undan ham ko'p) vaqtini sarflayotganini,
+              ma'lumotlarni yillar davomida xodimlardan Excelda bittalab yig'ib jamlash uchun ketgan vaqtlarni ko'rib
+              afsuslanasiz. Biz kerakli ilmni orqasidan quvmay qo'ydik.
+              Google sheets kursida o'qishni hammaga tavsiya qilaman. (nafaqat tavsiya bu hamma uchun zarur)
+              Ushbu kursda o'qigan odam ham bilim, ham real hayotda ham bir pog'ona oldinga o'tib olganini his qiladi.
+              Fikriy jihatdan oʻsasiz.
+            </p>
+          </div>
+
+          <!-- Review 5 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">F</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Ubaydullayev. F</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Korxonada moliyachi sifatida ishlayman ishimda avvaldan Google sheets dan foydalanardim anchagina oddiy
+              jadvallar va hisob kitoblar edi. Avvalgi kurs ham ko'pgina bilim berdi va chatgpt bilan birga ko'pgina
+              hisob kitoblarni yaxshiroq formatda avtomatlashtirdim. Bu orada korxona kattardi hisob kitoblar oshdi
+              bilimni google sheetsga berganim uchun nisbatan ishim yengillashdi va hisobotlar aniqlashdi.
+              Haqiqatda ko'p vaqt yig'ilgan bilimni ulashgansiz. Kursdan foydalanib ishimni sezilarli darajada
+              osonlashtirdim va juda foydali bo'ldi. Google sheetsni kuchini bilgan biladi
+            </p>
+          </div>
+
+          <!-- Review 6 -->
+          <div
+            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
+            <div class="flex items-center gap-3">
+              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
+                <span class="font-bold text-primary">U</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Umidjon</h4>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+
+              Kurs haqida gapiradigan boʻlsam juda yaxshi sababi yangi darslar qo'shilgan asosiysi tartiblangan bu juda
+              muhim manga eng yoqqan tarafi shuncha kurs olib o'qiganman lekin biror marta savollarga javob berishda
+              shaxsan o'zingiz vaqt ajratganingizda boshqa kurs egalari bunaqa yo'l tutmaydi
+              Necha marotaba savol bergan busam hammasini muammo li joyini hal qilib berdingiz aslini olganda 100 ming
+              emas 300 yoki 500 olsangiz ham boʻladigan vaziyat chunki kursingizni faqat sotib pul ishlayotganingiz yo'q
+              albatta hamma tushinib o'rganishi uchun harakat qilyapsiz sizga rahmat bergan bilimlaringiz ga
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
