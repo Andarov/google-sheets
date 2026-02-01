@@ -18,5 +18,24 @@ menuLinks.forEach((link) => {
 });
 
 
+document.querySelectorAll(".faq-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".faq-item");
+      const content = item.querySelector(".faq-content");
+      const icon = item.querySelector(".faq-icon");
+      const index = item.querySelector(".faq-index");
 
+      document.querySelectorAll(".faq-content").forEach(c => {
+        if (c !== content) {
+          c.classList.remove("open");
+          c.closest(".faq-item")
+           .querySelector(".faq-icon")
+           .classList.remove("faq-icon-active");
+        }
+      });
 
+      content.classList.toggle("open");
+      icon.classList.toggle("faq-icon-active");
+      index.classList.toggle("faq-index-active");
+    });
+  });
