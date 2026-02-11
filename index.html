@@ -55,22 +55,31 @@
         </a>
 
         <!-- Nav -->
-        <ul class="hidden items-center gap-1 bg-white/5 p-1.5 rounded-full border border-white/10 lg:flex">
+        <ul class="hidden items-center gap-1 bg-white/5 p-1.5 rounded-full border border-white/10 xl:flex">
           <li><a href="#about"
-              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
               haqida</a></li>
           <li><a href="#bolim"
-              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
               bo'limlari</a></li>
+          <li><a href="#author"
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              muallifi</a></li>
+          <li><a href="#pricing"
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">Kurs
+              tariflari</a></li>
           <li><a href="#feedbacks"
-              class="px-5 py-2.5 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-colors">Mijozlar
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">Mijozlar
               fikri</a></li>
+          <li><a href="#faq"
+              class="px-4 py-2 rounded-full text-xs font-medium hover:bg-white/10 hover:text-white transition-colors">FAQ</a>
+          </li>
         </ul>
 
         <div class="flex items-center gap-4">
-          <a href="https://t.me/Andarov_B" class="hidden btn-primary py-2.5 px-6 text-sm sm:flex">Kursga yozilish</a>
+          <a href="https://t.me/Andarov_B" class="hidden btn-primary py-2 px-5 text-sm sm:flex">Kursga yozilish</a>
           <button id="menuButton"
-            class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all lg:hidden">
+            class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all xl:hidden">
             <img width="24" height="24" src="./src/assets/images/icons/hamburger.svg" alt="Hamburger menu icon"
               class="size-5 invert opacity-80" />
           </button>
@@ -80,12 +89,15 @@
 
     <!-- Responsive menu -->
     <div id="mobileMenu"
-      class="fixed inset-x-0 h-[calc(100vh-72px)] top-[72px] z-40 bg-dark/95 backdrop-blur-xl border-b border-glass-border w-full py-10 translate-x-full transition-transform duration-300 lg:hidden">
+      class="fixed inset-x-0 h-[calc(100vh-72px)] top-[72px] z-40 bg-dark/95 backdrop-blur-xl border-b border-glass-border w-full py-10 translate-x-full transition-transform duration-300 xl:hidden">
       <div class="container">
         <ul class="flex flex-col items-center gap-6 text-center">
           <li><a href="#about" class="text-lg font-medium text-white menu-link">Kurs haqida</a></li>
           <li><a href="#bolim" class="text-lg font-medium text-white menu-link">Kurs bo'limlari</a></li>
-          <li><a href="#feedbacks" class="text-lg font-medium text-white menu-link">Kurs haqida fikrlar</a></li>
+          <li><a href="#author" class="text-lg font-medium text-white menu-link">Kurs muallifi</a></li>
+          <li><a href="#pricing" class="text-lg font-medium text-white menu-link">Kurs tariflari</a></li>
+          <li><a href="#feedbacks" class="text-lg font-medium text-white menu-link">Mijozlar fikri</a></li>
+          <li><a href="#faq" class="text-lg font-medium text-white menu-link">FAQ</a></li>
           <li><a href="https://t.me/Andarov_B" class="btn-primary w-full max-w-xs menu-link">Kursga yozilish</a></li>
         </ul>
       </div>
@@ -443,7 +455,7 @@
     </section>
 
     <!-- Author -->
-    <section class="py-16 md:py-24 bg-deep-void font-outfit">
+    <section id="author" class="py-16 md:py-24 bg-deep-void font-outfit">
       <div class="container mx-auto px-5">
         <!-- Header -->
         <div class="text-center mb-14">
@@ -497,7 +509,9 @@
               <p class="text-glass-white leading-relaxed">
                 Asosiy yo‘nalishlar:
                 <strong class="text-glass-white">
-                 Logistika, Xususiy klinika, Kargo, Eshik rom, Klaster, Kantselyariya, Aviakassa, PM, Telefon oldi-sotdi, Bo‘lib tolash, Uzum analitika, Zapravka, O‘quv markazlari, Chetdan tovar olib kelish, Parda, Shirinlik ishlab chiqarish, Qurilish, Xususiy talim va boshqa.
+                  Logistika, Xususiy klinika, Kargo, Eshik rom, Klaster, Kantselyariya, Aviakassa, PM, Telefon
+                  oldi-sotdi, Bo‘lib tolash, Uzum analitika, Zapravka, O‘quv markazlari, Chetdan tovar olib kelish,
+                  Parda, Shirinlik ishlab chiqarish, Qurilish, Xususiy talim va boshqa.
                 </strong>
               </p>
             </div>
@@ -622,7 +636,8 @@
         <div class="flex items-center justify-between mb-12">
           <h2>Kurs haqida fikrlar</h2>
 
-          <a href="https://t.me/google_sheets_course" class="hidden btn-primary py-2.5 px-6 text-sm sm:flex">Boshqa Fikrlar</a>
+          <a href="https://t.me/google_sheets_course" class="hidden btn-primary py-2.5 px-6 text-sm sm:flex">Boshqa
+            Fikrlar</a>
         </div>
 
         <!-- Static Grid -->
