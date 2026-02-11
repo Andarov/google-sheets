@@ -28,6 +28,33 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
+// Course Modules Scroll Activation
+const moduleObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const indicator = entry.target.querySelector(".step-indicator");
+    const number = entry.target.querySelector(".step-number");
+
+    if (entry.isIntersecting) {
+      // Activate
+      indicator.classList.remove("bg-surface", "border-white/20");
+      indicator.classList.add("bg-primary", "border-dark", "shadow-[0_0_20px_rgba(52,211,153,0.5)]");
+      number.classList.remove("text-gray-500");
+      number.classList.add("text-dark");
+    } else {
+      // Deactivate
+      indicator.classList.add("bg-surface", "border-white/20");
+      indicator.classList.remove("bg-primary", "border-dark", "shadow-[0_0_20px_rgba(52,211,153,0.5)]");
+      number.classList.add("text-gray-500");
+      number.classList.remove("text-dark");
+    }
+  });
+}, {
+  threshold: 0.6, // Activate when 60% of the item is visible
+  rootMargin: "-10% 0px -10% 0px" // Slight margin to feel more natural
+});
+
+document.querySelectorAll(".module-item").forEach(el => moduleObserver.observe(el));
+
 document.querySelectorAll(".faq-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const item = btn.closest(".faq-item");
