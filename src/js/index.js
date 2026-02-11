@@ -2,18 +2,11 @@ const menuButton = document.getElementById("menuButton");
 const mobileMenu = document.getElementById("mobileMenu");
 const menuLinks = document.querySelectorAll(".menu-link");
 
-// Responsive menu logic
+// Responsive menu
 menuButton.addEventListener("click", function () {
-  const isOpen = mobileMenu.classList.contains("translate-x-0");
-  if (isOpen) {
-    mobileMenu.classList.add("translate-x-full");
-    mobileMenu.classList.remove("translate-x-0");
-    document.documentElement.classList.remove("no-scroll");
-  } else {
-    mobileMenu.classList.remove("translate-x-full");
-    mobileMenu.classList.add("translate-x-0");
-    document.documentElement.classList.add("no-scroll");
-  }
+  mobileMenu.classList.toggle("translate-x-0");
+  mobileMenu.classList.toggle("translate-x-full");
+  document.documentElement.classList.toggle("no-scroll");
 });
 
 menuLinks.forEach((link) => {
@@ -24,7 +17,17 @@ menuLinks.forEach((link) => {
   });
 });
 
-// FAQ Accordion
+// Reveal animations on scroll
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("reveal-active");
+    }
+  });
+}, { threshold: 0 });
+
+document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
 document.querySelectorAll(".faq-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const item = btn.closest(".faq-item");
@@ -35,9 +38,9 @@ document.querySelectorAll(".faq-btn").forEach(btn => {
     document.querySelectorAll(".faq-content").forEach(c => {
       if (c !== content) {
         c.classList.remove("open");
-        const otherItem = c.closest(".faq-item");
-        otherItem.querySelector(".faq-icon").classList.remove("faq-icon-active");
-        otherItem.querySelector(".faq-index").classList.remove("faq-index-active");
+        c.closest(".faq-item")
+          .querySelector(".faq-icon")
+          .classList.remove("faq-icon-active");
       }
     });
 

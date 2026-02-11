@@ -1,4 +1,4 @@
- /** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./*.{html,js}"],
   theme: {
@@ -10,13 +10,14 @@ export default {
         surface: "#121212", // Slightly lighter dark
         glass: "rgba(255, 255, 255, 0.05)",
         "glass-border": "rgba(255, 255, 255, 0.1)",
+        "deep-void": "#030303",
       },
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
       },
       backgroundImage: {
-         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-         'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #34D39933 0deg, #05966933 180deg, #34D39933 360deg)',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'hero-glow': 'conic-gradient(from 180deg at 50% 50%, #34D39933 0deg, #05966933 180deg, #34D39933 360deg)',
       }
     },
 
@@ -28,6 +29,15 @@ export default {
       xl: "1280px",
       "2xl": "1536px",
     },
+    animation: {
+      'glow-pulse': 'glow pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+    },
+    keyframes: {
+      pulse: {
+        '0%, 100%': { opacity: 1 },
+        '50%': { opacity: .5 },
+      }
+    }
   },
   plugins: [],
 }
