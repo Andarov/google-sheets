@@ -1102,6 +1102,10 @@ textarea{
   margin-bottom: 0.25rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .block{
   display: block;
 }
@@ -1763,6 +1767,10 @@ textarea{
   padding: 1rem;
 }
 
+.p-2{
+  padding: 0.5rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1862,6 +1870,10 @@ textarea{
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .font-outfit{
@@ -2283,6 +2295,11 @@ textarea{
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:text-emerald-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(52 211 153 / var(--tw-text-opacity, 1));
+}
+
 .group\/menu:hover .group-hover\/menu\:visible{
   visibility: visible;
 }
@@ -2294,6 +2311,11 @@ textarea{
 
 .group\/menu:hover .group-hover\/menu\:translate-y-0{
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group\/link:hover .group-hover\/link\:translate-x-1{
+  --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
