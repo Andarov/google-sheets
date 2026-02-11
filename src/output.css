@@ -2258,6 +2258,10 @@ textarea{
   padding-left: 2.5rem;
 }
 
+.pb-8{
+  padding-bottom: 2rem;
+}
+
 .text-left{
   text-align: left;
 }
