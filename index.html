@@ -618,23 +618,46 @@
                 </div>
               </div>
 
-              <!-- Community (Slimmer Telegram Card) -->
-              <div
-                class="flex flex-col md:flex-row items-center justify-between gap-6 p-5 glass-card border-primary/20 bg-primary/5">
-                <div class="flex items-center gap-4">
-                  <div class="size-10 rounded-xl flex items-center justify-center shadow-lg">
-                    <img src="./src/assets/images/icons/telegram.svg" />
+              <!-- Community (YouTube & Telegram) -->
+              <div class="flex flex-col gap-4">
+                <!-- Telegram -->
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-6 p-5 glass-card border-primary/20 bg-primary/5">
+                  <div class="flex items-center gap-4">
+                    <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center shadow-lg">
+                      <img src="./src/assets/images/icons/telegram.svg" class="size-6" />
+                    </div>
+                    <div>
+                      <h3 class="text-[11px] font-bold text-white uppercase tracking-tight mb-0.5">Telegram Kanal</h3>
+                      <p class="text-[10px] font-medium text-gray-400">@google_sheets_demo</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 class="text-[11px] font-bold text-white uppercase tracking-tight mb-0.5">Google Sheets bo'yicha
-                      eng katta influeserlardan biri</h3>
-                    <p class="text-[10px] font-medium text-gray-400">@google_sheets_demo</p>
-                  </div>
+                  <a href="https://t.me/google_sheets_demo" target="_blank"
+                    class="btn-primary py-2.5 px-6 text-[12px] w-full md:w-auto text-center font-bold">
+                    Kanalga qo'shilish
+                  </a>
                 </div>
-                <a href="https://t.me/google_sheets_demo" target="_blank"
-                  class="btn-primary py-2.5 px-6 text-[12px] w-full md:w-auto text-center font-bold">
-                  Kanalga qo'shilish
-                </a>
+
+                <!-- YouTube -->
+                <div
+                  class="flex flex-col md:flex-row items-center justify-between gap-6 p-5 glass-card border-red-500/20 bg-red-500/5">
+                  <div class="flex items-center gap-4">
+                    <div class="size-10 rounded-xl bg-red-500/10 flex items-center justify-center shadow-lg">
+                      <svg class="size-6 text-red-500" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="text-[11px] font-bold text-white uppercase tracking-tight mb-0.5">YouTube Kanal</h3>
+                      <p class="text-[10px] font-medium text-gray-400">@Andarov_B</p>
+                    </div>
+                  </div>
+                  <a href="https://www.youtube.com/@Andarov_B" target="_blank"
+                    class="bg-red-600/20 hover:bg-red-600/30 text-red-500 border border-red-500/30 py-2.5 px-6 rounded-full text-[12px] w-full md:w-auto text-center font-bold transition-all">
+                    Obuna bo'lish
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -911,7 +934,8 @@
                       <path d="M20 6L9 17L4 12" />
                     </svg>
                   </div>
-                  <span class="text-yellow-400 font-medium leading-snug">15+ tayyor templatelar (tezda foydalanish uchun)</span>
+                  <span class="text-yellow-400 font-medium leading-snug">15+ tayyor templatelar (tezda foydalanish
+                    uchun)</span>
                 </li>
               </ul>
 
@@ -929,150 +953,244 @@
     <!-- Feedback / Gallery -->
     <section id="feedbacks" class="py-16 md:py-20 bg-surface/30">
       <div class="container overflow-hidden">
-        <div class="flex items-center justify-between mb-12">
-          <h2>Kurs haqida fikrlar</h2>
+        <div class="flex items-center justify-between mb-12 gap-4">
+          <h2 class="text-3xl font-black text-white shrink-0"><span class="hidden md:inline-block">Kurs haqida</span>
+            Fikrlar</h2>
 
-          <a href="https://t.me/google_sheets_course" class="hidden btn-primary py-2.5 px-6 text-sm sm:flex">Boshqa
-            Fikrlar</a>
+          <a href="https://t.me/google_sheets_course" target="_blank"
+            class="group flex items-center gap-2 text-primary font-bold text-xs md:text-sm transition-opacity hover:opacity-80">
+            <span>Boshqa Fikrlar</span>
+            <svg class="size-4 md:size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="3">
+              <path d="M5 12h14m-7-7l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
         </div>
 
-        <!-- Static Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Masonry Grid for Feedbacks (Fix: removed space-y-8) -->
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-8">
 
           <!-- Review 1 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">G'</span>
+          <div class="break-inside-avoid-column mb-8 inline-block w-full">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.03]">
+              <!-- Quote Icon -->
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">G'anisher Raximov</h4>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">G'</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">G'anisher Raximov</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Kurs man kutgan kursim ekan, sizni kursizni olishdan oldin boshqa kurslarda o'qib chiqdim, ulardan yangi
+                narsa o'rganmadim, excel google sheets boyicha tajribam bor kop ishlatiladigan formulalarni bilardim
+                sotib
+                olgan pro kurslarim ham shu narsalarni orgatdi 2-3 ta narsa organganman. Sizni kursizda nimasi yoqdi
+                desangiz real keyslar bilan tushintirgansiz, struktura tuzish bor, formulalarni dinamik qilishni kordim,
+                man kormagan formulalar bor, va yana bitta zor tarafi ozingiz tomonizdan yordam shu ham menga juda yoqdi
+                lekin kursni hali toliq korib chiqmadim lekin kop malumotlar oldim savollarim kamaydi, ha yana zor
+                tarafi
+                kurs umrbod va yangi video darslar qoshib borishiz va ozingizdagi muammolarni ulashib borishingiz shu
+                taraflari ham juda yoqdi. Kim mandan google sheets boyicha kurs sorasa sizni tavsiya qilyabman va
+                barchasi
+                hozir sizni kursizda oqiyabdilar. Katta rahmat ustoz
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Kurs man kutgan kursim ekan, sizni kursizni olishdan oldin boshqa kurslarda o'qib chiqdim, ulardan yangi
-              narsa o'rganmadim, excel google sheets boyicha tajribam bor kop ishlatiladigan formulalarni bilardim sotib
-              olgan pro kurslarim ham shu narsalarni orgatdi 2-3 ta narsa organganman. Sizni kursizda nimasi yoqdi
-              desangiz real keyslar bilan tushintirgansiz, struktura tuzish bor, formulalarni dinamik qilishni kordim,
-              man kormagan formulalar bor, va yana bitta zor tarafi ozingiz tomonizdan yordam shu ham menga juda yoqdi
-              lekin kursni hali toliq korib chiqmadim lekin kop malumotlar oldim savollarim kamaydi, ha yana zor tarafi
-              kurs umrbod va yangi video darslar qoshib borishiz va ozingizdagi muammolarni ulashib borishingiz shu
-              taraflari ham juda yoqdi. Kim mandan google sheets boyicha kurs sorasa sizni tavsiya qilyabman va barchasi
-              hozir sizni kursizda oqiyabdilar. Katta rahmat ustoz
-            </p>
           </div>
 
           <!-- Review 2 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">A</span>
+          <div class="break-inside-avoid-column mb-8 inline-block w-full">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.03]">
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Akrom</h4>
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">A</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Akrom</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Darslaringiz juda ajoyib, bunday darsliklarni o`zbek tilidagisini topish muammo, youtubeda ham kamida
+                rus
+                tilidagisi bor bo`lmasam qolgan hammasi ingliz tilida, til bilmagan odamlarni o`rganishi juda qiyin
+                bo`ladi. Bitta formulani o`rganish uchun avval darsliklarni kamida 3-4 tasini ko`rib shular haqida
+                ma`lumotlar yig`adi keyin esa tushunib olishi mumkin. SIzda esa buni kerak bo`lsa jaydaricha tilda ham
+                yaxshigina tushuntirgansiz. SHogirtlaringiz ham yoshlari anchagina , Ko`pchilik kanal ochib google
+                sheets
+                bo`yicha darsliklarni berishni yoki bo`lmasam o`z xizmatlarini taklif qilishini boshlashdi yaxshilab
+                so`rasam ularni aksariyati sizni shogirtlaringiz.Nafaqat darsliklar balki qolgan hammasi zo`r.
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Darslaringiz juda ajoyib, bunday darsliklarni o`zbek tilidagisini topish muammo, youtubeda ham kamida rus
-              tilidagisi bor bo`lmasam qolgan hammasi ingliz tilida, til bilmagan odamlarni o`rganishi juda qiyin
-              bo`ladi. Bitta formulani o`rganish uchun avval darsliklarni kamida 3-4 tasini ko`rib shular haqida
-              ma`lumotlar yig`adi keyin esa tushunib olishi mumkin. SIzda esa buni kerak bo`lsa jaydaricha tilda ham
-              yaxshigina tushuntirgansiz. SHogirtlaringiz ham yoshlari anchagina , Ko`pchilik kanal ochib google sheets
-              bo`yicha darsliklarni berishni yoki bo`lmasam o`z xizmatlarini taklif qilishini boshlashdi yaxshilab
-              so`rasam ularni aksariyati sizni shogirtlaringiz.Nafaqat darsliklar balki qolgan hammasi zo`r.
-            </p>
           </div>
 
           <!-- Review 3 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">R</span>
+          <div class="break-inside-avoid-column mb-8 inline-block w-full">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.03]">
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Abdullayev. R</h4>
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">R</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Abdullayev. R</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Ko'p excel kurslariga borib ko'rdim, shu ustozga raxmat diman, @Andarov_B, qivotkan ishni oldin tasavur
+                qilib, keyin qillshni, o'rgatdi excelda Google sheetsda koplab formulala bor, uladan qaysi momentda
+                qanday
+                foydalanishni, real ko'zizi oldiga keltirib o'qishni shu ustozdan o'rgandim<br><br>
+
+                O'zim Respublika Tez tibbiy yordam markazi Toshkent shahar filialida Avtojamlanma boshlig'iman, butun
+                boshli 103 ni oylik tizimi, benzin, xodimlani boshqarish tizimi shu ustoz orqali takomillashdi yanayam
+                yetuk o'ringa erishdi disamam, bo'ladi kerakli javobni shu insondan oldim.<br><br>
+
+                Real keys, tizimim yakunlansa qisqacha tashab o'taman, 103 da butun boshli shahar qanday tizim
+                qilinganini
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Ko'p excel kurslariga borib ko'rdim, shu ustozga raxmat diman, @Andarov_B, qivotkan ishni oldin tasavur
-              qilib, keyin qillshni, o'rgatdi excelda Google sheetsda koplab formulala bor, uladan qaysi momentda qanday
-              foydalanishni, real ko'zizi oldiga keltirib o'qishni shu ustozdan o'rgandim
-
-              O'zim Respublika Tez tibbiy yordam markazi Toshkent shahar filialida Avtojamlanma boshlig'iman, butun
-              boshli 103 ni oylik tizimi, benzin, xodimlani boshqarish tizimi shu ustoz orqali takomillashdi yanayam
-              yetuk o'ringa erishdi disamam, bo'ladi kerakli javobni shu insondan oldim.
-
-              Real keys, tizimim yakunlansa qisqacha tashab o'taman, 103 da butun boshli shahar qanday tizim qilinganini
-            </p>
           </div>
 
           <!-- Review 4 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">A</span>
+          <div class="break-inside-avoid-column mb-8 inline-block w-full">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.03]">
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Abror</h4>
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">A</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Abror</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Google sheets kursida o'qiganingizdan so'ng ayrim odamlar bitta formula yoki amal bilan qilish mumkin
+                boʻlgan ishni yillar davomida qoʻlda bittalab 3-4 soat(undan ham ko'p) vaqtini sarflayotganini,
+                ma'lumotlarni yillar davomida xodimlardan Excelda bittalab yig'ib jamlash uchun ketgan vaqtlarni ko'rib
+                afsuslanasiz. Biz kerakli ilmni orqasidan quvmay qo'ydik.<br><br>
+                Google sheets kursida o'qishni hammaga tavsiya qilaman. (nafaqat tavsiya bu hamma uchun zarur)<br><br>
+                Ushbu kursda o'qigan odam ham bilim, ham real hayotda ham bir pog'ona oldinga o'tib olganini his qiladi.
+                Fikriy jihatdan oʻsasiz.
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-
-              Google sheets kursida o'qiganingizdan so'ng ayrim odamlar bitta formula yoki amal bilan qilish mumkin
-              boʻlgan ishni yillar davomida qoʻlda bittalab 3-4 soat(undan ham ko'p) vaqtini sarflayotganini,
-              ma'lumotlarni yillar davomida xodimlardan Excelda bittalab yig'ib jamlash uchun ketgan vaqtlarni ko'rib
-              afsuslanasiz. Biz kerakli ilmni orqasidan quvmay qo'ydik.
-              Google sheets kursida o'qishni hammaga tavsiya qilaman. (nafaqat tavsiya bu hamma uchun zarur)
-              Ushbu kursda o'qigan odam ham bilim, ham real hayotda ham bir pog'ona oldinga o'tib olganini his qiladi.
-              Fikriy jihatdan oʻsasiz.
-            </p>
           </div>
 
           <!-- Review 5 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">F</span>
+          <div class="break-inside-avoid-column mb-8">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.01]">
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Ubaydullayev. F</h4>
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">F</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Ubaydullayev. F</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Korxonada moliyachi sifatida ishlayman ishimda avvaldan Google sheets dan foydalanardim anchagina oddiy
+                jadvallar va hisob kitoblar edi. Avvalgi kurs ham ko'pgina bilim berdi va chatgpt bilan birga ko'pgina
+                hisob kitoblarni yaxshiroq formatda avtomatlashtirdim. Bu orada korxona kattardi hisob kitoblar oshdi
+                bilimni google sheetsga berganim uchun nisbatan ishim yengillashdi va hisobotlar aniqlashdi.<br><br>
+                Haqiqatda ko'p vaqt yig'ilgan bilimni ulashgansiz. Kursdan foydalanib ishimni sezilarli darajada
+                osonlashtirdim va juda foydali bo'ldi. Google sheetsni kuchini bilgan biladi
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Korxonada moliyachi sifatida ishlayman ishimda avvaldan Google sheets dan foydalanardim anchagina oddiy
-              jadvallar va hisob kitoblar edi. Avvalgi kurs ham ko'pgina bilim berdi va chatgpt bilan birga ko'pgina
-              hisob kitoblarni yaxshiroq formatda avtomatlashtirdim. Bu orada korxona kattardi hisob kitoblar oshdi
-              bilimni google sheetsga berganim uchun nisbatan ishim yengillashdi va hisobotlar aniqlashdi.
-              Haqiqatda ko'p vaqt yig'ilgan bilimni ulashgansiz. Kursdan foydalanib ishimni sezilarli darajada
-              osonlashtirdim va juda foydali bo'ldi. Google sheetsni kuchini bilgan biladi
-            </p>
           </div>
 
           <!-- Review 6 -->
-          <div
-            class="glass-card p-6 rounded-2xl flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 group h-full">
-            <div class="flex items-center gap-3">
-              <div class="size-10 rounded-full bg-white/10 flex items-center justify-center border border-white/5">
-                <span class="font-bold text-primary">U</span>
+          <div class="break-inside-avoid-column mb-8">
+            <div class="relative glass-card p-8 rounded-3xl flex flex-col gap-5 border-white/5 bg-white/[0.01]">
+              <div class="absolute top-6 right-8 opacity-10">
+                <svg class="size-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 6.79086 11.8079 5 14.017 5H16.017C18.2261 5 20.017 6.79086 20.017 9V15C20.017 17.2091 18.2261 19 16.017 19H14.017V21H14.017ZM4.017 21L4.017 18C4.017 16.8954 4.91238 16 6.017 16H9.017C9.56928 16 10.017 15.5523 10.017 15V9C10.017 8.44772 9.56928 8 9.017 8H5.017C4.46472 8 4.017 8.44772 4.017 9V12C4.017 12.5523 3.56928 13 3.017 13H1.017C0.464722 13 -0.017 12.5523 -0.017 12V9C-0.017 6.79086 1.77386 5 3.983 5H5.983C8.19214 5 9.983 6.79086 9.983 9V15C9.983 17.2091 8.19214 19 5.983 19H3.983V21H4.017Z" />
+                </svg>
               </div>
-              <div>
-                <h4 class="font-bold text-white text-sm">Umidjon</h4>
+              <div class="flex items-center gap-4">
+                <div
+                  class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
+                  <span class="font-black text-primary text-lg">U</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-base">Umidjon</h4>
+                  <div class="flex gap-0.5 mt-1">
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                    <span class="size-1 rounded-full bg-primary/40"></span>
+                  </div>
+                </div>
               </div>
+              <p class="text-gray-400 text-[15px] leading-relaxed font-medium">
+                Kurs haqida gapiradigan boʻlsam juda yaxshi sababi yangi darslar qo'shilgan asosiysi tartiblangan bu
+                juda
+                muhim manga eng yoqqan tarafi shuncha kurs olib o'qiganman lekin biror marta savollarga javob berishda
+                shaxsan o'zingiz vaqt ajratganingizda boshqa kurs egalari bunaqa yo'l tutmaydi<br><br>
+                Necha marotaba savol bergan busam hammasini muammo li joyini hal qilib berdingiz aslini olganda 100 ming
+                emas 300 yoki 500 olsangiz ham boʻladigan vaziyat chunki kursingizni faqat sotib pul ishlayotganingiz
+                yo'q
+                albatta hamma tushinib o'rganishi uchun harakat qilyapsiz sizga rahmat bergan bilimlaringiz ga
+              </p>
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed">
-
-              Kurs haqida gapiradigan boʻlsam juda yaxshi sababi yangi darslar qo'shilgan asosiysi tartiblangan bu juda
-              muhim manga eng yoqqan tarafi shuncha kurs olib o'qiganman lekin biror marta savollarga javob berishda
-              shaxsan o'zingiz vaqt ajratganingizda boshqa kurs egalari bunaqa yo'l tutmaydi
-              Necha marotaba savol bergan busam hammasini muammo li joyini hal qilib berdingiz aslini olganda 100 ming
-              emas 300 yoki 500 olsangiz ham boʻladigan vaziyat chunki kursingizni faqat sotib pul ishlayotganingiz yo'q
-              albatta hamma tushinib o'rganishi uchun harakat qilyapsiz sizga rahmat bergan bilimlaringiz ga
-            </p>
           </div>
 
         </div>
@@ -1325,7 +1443,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="py-12 bg-dark border-t border-glass-border">
+  <footer class="py-8 bg-dark border-t border-glass-border">
     <div class="container">
       <div class="flex flex-col md:flex-row items-center justify-between gap-8">
 
@@ -1341,21 +1459,32 @@
         </div>
 
         <!-- Social -->
-        <div class="flex gap-4">
-          <a href="#"
-            class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-            <img src="./src/assets/images/icons/instagram.svg" class="size-5 invert" />
+        <!-- Social -->
+        <div class="flex gap-5">
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@google_sheets_dars" target="_blank"
+            class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-red-600/20 hover:border-red-500/50 hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:-translate-y-1 group">
+            <svg class="size-6 text-gray-400 group-hover:text-red-500 transition-colors" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
           </a>
-          <a href="https://t.me/google_sheets_demo"
-            class="size-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-            <img src="./src/assets/images/icons/telegram.svg" class="size-5 invert" />
+          <!-- Telegram -->
+          <a href="https://t.me/google_sheets_demo" target="_blank"
+            class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 hover:bg-primary/20 hover:border-primary/50 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:-translate-y-1 group">
+            <svg class="size-6 text-gray-400 group-hover:text-primary transition-colors" viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.155-.262.29-.537.29l.202-3.02 5.507-4.975c.241-.212-.049-.33-.359-.125l-6.806 4.288-2.924-.928c-.642-.2-.656-.642.125-.942l11.433-4.406c.537-.197 1.01.125.86 1.003z" />
+            </svg>
           </a>
         </div>
 
       </div>
 
       <!-- Copyright -->
-      <div class="mt-8 pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+      <div class="pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
         &copy; 2026 Google Sheets Uz. Barcha huquqlar himoyalangan.
       </div>
     </div>
